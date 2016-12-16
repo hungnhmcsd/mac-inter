@@ -1,0 +1,548 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/**********************************************************************************/
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#mac-video video {
+    width: 1349px;
+    height: 100%;
+}
+
+#mac-video {
+    position: relative;
+    margin-bottom: -5px;
+}
+
+.mac-logo-wrapper {
+    position: absolute;
+    transition: all 1s ease-in-out;
+    top: 40%;
+    left: 32%;
+    z-index: 1000;
+}
+
+.mac-logo {
+    transition: all 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+}
+
+.mac-logo-wrapper img:nth-of-type(2) {
+    opacity: 0;
+}
+
+.mac-logo-wrapper:hover img:nth-of-type(2) {
+    opacity: 1;
+}
+
+.mac-logo-wrapper:hover img:nth-of-type(1) {
+    opacity: 0;
+}
+
+.mac-hide-logo {
+    cursor: pointer;
+}
+
+.mac-arrow-down {
+    display: inline-block;
+    width: 7%;
+    position: absolute;
+    z-index: 10000;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    animation-name: move-up-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.mac-arrow-down:hover {
+    animation-play-state: running;
+    cursor: pointer;
+}
+
+@keyframes move-up-down {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -35%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+#mac-menu {
+    background-color: #1e1e1e;
+    margin-top: -5px;
+}
+
+.mac-bar-menu {
+    height: 50px;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 50px;
+}
+
+.mac-bar-logo {
+    float: right;
+    text-align: right;
+}
+
+.mac-bar-logo img {
+    display: inline-block;
+    width: 20%;
+}
+
+.mac-bar-logo img:hover,
+.mac-logo:hover {
+    cursor: pointer;
+}
+
+.mac-bar {
+    float: left;
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+.line {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #FFDB00;
+    margin: 10px 0;
+}
+
+.bar-line {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+.overlay-bar:hover {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.line:hover {
+    cursor: pointer;
+}
+
+#mac-overlay {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    background-color: #1e1e1e;
+    height: 700px;
+    color: #fff;
+    opacity: 0.9;
+    z-index: 1000;
+    transition: all 0.5s;
+}
+
+#mac-overlay div {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu-main-container {
+    transition: all 1s;
+    visibility: hidden;
+    height: 0;
+}
+
+.menu-main-container ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 70px;
+}
+
+.menu-main-container ul li {
+    padding: 10px 0;
+    font-size: 1.3em;
+    list-style-type: none;
+}
+
+.menu-main-container ul li:hover {
+    cursor: pointer;
+    color: #FFDB00;
+}
+
+.overlay-bar {
+    padding-top: 30px;
+    position: relative;
+    top: 13px;
+    height: 35px;
+    left: 28px;
+}
+
+.overlay-middle {
+    display: none;
+}
+
+.overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.overlay-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.mac-bar:hover,
+.overlay-bar:hover {
+    cursor: pointer;
+}
+
+.mac-img-50 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 50%;
+    height: 400px;
+    position: relative;
+    line-height: 400px;
+}
+
+.mac-img-100 {
+    height: 400px;
+    float: left;
+    width: 100%;
+    position: relative;
+    line-height: 400px;
+}
+
+.mac-img-50:hover,
+.mac-img-100:hover {
+    cursor: pointer;
+}
+
+.mac-img1 {
+    background-image: url(../img/homepage-abpout-you.jpg);
+}
+
+.mac-img2 {
+    background-image: url(../img/about-us-grid.jpg);
+}
+
+.mac-img3 {
+    background-image: url(../img/painpoint-home-grid.jpg);
+}
+
+.mac-img4 {
+    background-image: url(../img/Cover_EY_Station-0018.jpg)
+}
+
+.mac-img5 {
+    background-image: url(../img/CIRT-Helmet.jpg);
+}
+
+.mac-img6 {
+    background-image: url(../img/Sustainability-wide-shot.jpg);
+}
+
+.mac-img7 {
+    background-image: url(../img/abcom.jpg);
+}
+
+.mac-img8 {
+    background-image: url(../img/tuenkey-home-grid.jpg);
+}
+
+.mac-img9 {
+    background-image: url(../img/Mac-Chat-Homepage-800x500.jpg);
+}
+
+.mac-img10 {
+    background-image: url(../img/800-by-500-black-and-white-city-man-people-large.jpg);
+}
+
+.mac-img-50 span,
+.mac-img-100 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3em;
+    color: #D1D1D6;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.mac-img-50 span:hover,
+.mac-img-100 span:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(252, 201, 0, 0.7));
+}
+
+.middle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    transition: all 0.5s;
+}
+
+.top {
+    position: absolute;
+    top: 5px;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+
+.bottom {
+    position: absolute;
+    top: 25px;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+
+#mac-footer {
+    background-color: #1e1e1e;
+    width: 100%;
+    display: inline-block;
+    height: 160px;
+    margin-bottom: -5px;
+    line-height: 160px;
+}
+
+.mac-footer-img,
+.mac-footer-socials {
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.mac-footer-img img:hover {
+    cursor: pointer;
+}
+
+.mac-footer-info {
+    width: 40%;
+    float: left;
+    text-align: center;
+}
+
+.mac-footer-img img {
+    width: 50%;
+}
+
+.mac-footer-info span {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.mac-footer-socials i {
+    padding: 7px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    margin-left: 7px;
+}
+
+.mac-footer-socials i:hover {
+    color: #FFDB00;
+    cursor: pointer;
+    border: 1px solid #FFDB00;
+}
+
+.stick {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
